@@ -1,17 +1,25 @@
-import { useState } from 'react';
-import Navbar from './components/estaticos/navbar/Navbar';
-import Footer from './components/estaticos/footer/Footer';
-import { Grid } from '@material-ui/core';
-import Home from './paginas/home/home';
-import './App.css'
+import React from "react";
+import Footer from "./components/estaticos/footer/Footer";
+import Navbar from "./components/estaticos/navbar/Navbar";
+import Home from "./paginas/home/Home";
+import "./App.css";
 
 function App() {
   return (
     <>
-      <Navbar/>
-        <Home
+    <BrowserRouter>
+      <Navbar />
+      <div style={{ minHeight: '100vh' }}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+        </Routes>
+      </div>
+      <Footer />
+    </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

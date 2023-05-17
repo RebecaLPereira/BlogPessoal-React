@@ -1,18 +1,9 @@
-import "./style.css";
+import './home.css';
 
 function Home() {
   return (
     <>
-      <div>
-        <ul id="menu">
-          <li>
-            <a href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="index.html">Contato</a>
-          </li>
-        </ul>
-      </div>
+      <h1>Home</h1>
     </>
   );
 }
